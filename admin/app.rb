@@ -34,6 +34,7 @@ module PadrinoBlog
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :post_tags, '/post_tags'
     role.project_module :authors, '/authors'
     role.project_module :tags, '/tags'
     role.project_module :comments, '/comments'
